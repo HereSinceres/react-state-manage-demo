@@ -18,5 +18,5 @@ export class Timer {
     this.secondsPassed = 0;
   }
 }
-
-export const MyTimerService = createService(() => new Timer());
+export const ins = new Timer();
+export const MyTimerService = createService(() => ins);

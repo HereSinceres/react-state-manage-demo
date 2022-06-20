@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { observer } from 'mobx-react';
 
-import { MyTimerService } from '../controller';
+import { MyTimerService, ins } from '../controller';
 
 const TimerView = observer(() => {
   // Grab the timer from the context.
@@ -12,10 +12,9 @@ const TimerView = observer(() => {
 
 const TimerViewButton = observer(() => {
   // Grab the timer from the context.
-  const timer = MyTimerService.useInject();
   return (
     <div>
-      {Math.random()} Seconds passed: {timer.secondsPassed}
+      {Math.random()} Seconds passed: {ins.secondsPassed}
     </div>
   );
 });

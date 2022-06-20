@@ -16,6 +16,9 @@ export default function Header() {
       <NavLink to="/hook" className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`}>
         hook
       </NavLink>
+      <NavLink to="/mobx" className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`}>
+        mobx
+      </NavLink>
     </header>
   );
 }

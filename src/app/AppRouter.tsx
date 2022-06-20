@@ -5,6 +5,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { exampleModule } from './app-example';
 import { hookServiceDemoModule } from './app-hookServiceDemo';
 import { appModule } from './app-jotaiDemo';
+import { mobxDemoModule } from './app-mobxDemo';
 import { zustandDemoModule } from './app-zustandDemo';
 import { Header } from './layout';
 
@@ -17,6 +18,7 @@ export default function AppRouter() {
 
       <Suspense fallback={<LoadingMessage />}>
         <Routes>
+          {mobxDemoModule.routes}
           {exampleModule.routes}
           {zustandDemoModule.routes}
           {hookServiceDemoModule.routes}
